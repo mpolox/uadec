@@ -3,9 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "firebase": "^7.0.0",
+    "moment": "^2.24.0",
+    "npm": "^6.11.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.2"
+    "react-redux": "^5.1.1",
+    "react-redux-firebase": "^2.4.1",
+    "react-router-dom": "^5.1.0",
+    "react-scripts": "3.1.2",
+    "redux": "^4.0.4",
+    "redux-firestore": "^0.9.0",
+    "redux-thunk": "^2.3.0",
+    "ts-pnp": "^1.1.4",
+    "tsutils": "^3.17.1",
+    "typescript": "^3.6.3"
   },
   "scripts": {
     "start": "react-scripts start",

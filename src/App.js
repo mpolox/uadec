@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import NavBar from "./components/layout/NavBar";
+import Dashboard from "./components/dashboard/Dashboard";
+import CreateNotification from "./components/create/CreateNotification";
+import NotificationHistory from "./components/history/NotificationHistory";
+import Admin from "./components/admin/Admin";
+import NotificationDetails from "./components/dashboard/NotificationDetails";
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+        <Switch>
+          <Route exact path='/' component={ Dashboard } />
+          <Route path='/new' component={ CreateNotification } />
+          <Route path='/history' component={ NotificationHistory } />
+          <Route path='/admin' component={ Admin } />
+          <Route path='/notification/:id' component={ NotificationDetails } />
+        </Switch>      
+    </BrowserRouter>    
   );
 }
 
