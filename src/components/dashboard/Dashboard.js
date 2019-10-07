@@ -19,16 +19,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
     {collection: "notifications"}
   ])
 )((Dashboard))
-// change firestoreConnect([{ collection: "projects", orderBy: ["createdAt", "desc"] }])  to  firestoreConnect(["projects"])
-
-
-
-//export default firestoreConnect([{ collection: "notifications" }])(connect(mapStateToProps )(Dashboard))
- //export default firestoreConnect([ "notifications "])(connect(mapStateToProps)(Dashboard))

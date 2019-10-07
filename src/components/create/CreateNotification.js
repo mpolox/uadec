@@ -51,7 +51,7 @@ export class CreateNotification extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return{
+  return {
     addNotification: (notification) => dispatch(addNotification(notification))
   }
 }
